@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>VCF Audit Diff Tool</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css" type="text/css" media="screen"></link>
+</head>
+
+<body>
+
+<div id="settings">
+	<h1>VCF Audit Diff Tool</h1>
+	<button id="button" onclick="clearFunction()">Clear</button>
+	<button id="button" onclick="saveFunction()">Save</button>
+</div>
+
+<table id="diffTable">
+	<tr id="diffRow">
+		<td contenteditable="true" id="left"></td>
+		<td contenteditable="true" id="right"></td>
+		<td><pre id="result"></pre></td>
+	</tr>
+</table>
+
+<div>
+		<input type="file" id="fileLeft" onchange="handleFiles(this.files, 'left')"></input> 
+		<input type="file" id="fileRight" onchange="handleFiles(this.files, 'right')"></input>
+</div>
+
+<script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}" ></script>
+<script type="text/javascript" src="../static/js/diff.js" th:src="@{/js/diff.js}" ></script>
+</body>
+</html>

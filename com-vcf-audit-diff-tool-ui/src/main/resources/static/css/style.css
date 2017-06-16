@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	background: #EEE;
+	font: 12px sans-serif;
+}
+body {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body, table, tbody, tr, td {
+	height: 100%
+}
+table {
+	table-layout: fixed;
+	width: 100%;
+}
+td {
+	width: 33%;
+	padding: 3px 4px;
+	border: 1px solid transparent;
+	vertical-align: top;
+	font: 1em monospace;
+	text-align: left;
+	white-space: pre-wrap;
+}
+h1 {
+    float: left;
+    color: white;
+    font-size: 200%;
+    margin-left: 2%;
+    margin-right: 10px;
+    line-height: 1;
+    width: 70%;
+    padding: 13px 3px;
+}
+button {
+	width: 75px;
+    height: 36px;
+    padding: 3px 4px;
+    margin: 0.4em;
+}
+del {
+	text-decoration: none;
+	color: #f9f9f9;
+	background: #e41212;
+}
+ins {
+	background: #aece10;
+	color: #141513;
+	text-decoration: none;
+}
+#settings {
+	position: relative;
+	top: 0;
+	left: 1px;
+	right: 15px;
+	height: 4em;
+	line-height: 2em;
+	background: #333333;
+	width: 100%;
+}
+#settings label {
+	margin-left: 1em;
+}
+#fileLeft{
+	width: 33%;
+    padding-left: 2em;
+}
+#fileRight{
+	width: 31%;
+}
+.source {
+	position: absolute;
+	right: 1%;
+	top: .2em;
+}
+
+span.fileInput {
+    margin-left: 2em;
+}
+
+[contentEditable] {
+	background: #F9F9F9;
+	border-color: #BBB #D9D9D9 #DDD;
+	border-radius: 4px;
+	-webkit-user-modify: read-write-plaintext-only;
+	outline: none;
+}
+[contentEditable]:focus {
+	background: #FFF;
+	border-color: #6699cc;
+	box-shadow: 0 0 4px #2175c9;
+}
+
+@-moz-document url-prefix() {
+	body {
+		height: 99%; /* Hide scroll bar in Firefox */
+	}
+}
